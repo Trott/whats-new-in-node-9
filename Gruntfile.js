@@ -1,4 +1,5 @@
-/* global module:false */
+const sass = require('dart-sass');
+
 module.exports = function(grunt) {
 	var port = grunt.option('port') || 8000;
 	var root = grunt.option('root') || '.';
@@ -38,6 +39,9 @@ module.exports = function(grunt) {
 				files: {
 					'css/reveal.css': 'css/reveal.scss',
 				}
+			},
+			options: {
+				implementation: sass,
 			},
 			themes: {
 				files: [
